@@ -1,11 +1,12 @@
-import AboutUs from "./pages/AboutUs";
+import AboutUsPage from './pages/AboutUsPage';
+
 
 function App() {
-  return (
-    <div className="App">
-      <AboutUs />
-    </div>
-  );
+    return (
+        <div className="App">
+            <AboutUsPage />
+        </div>
+    );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import home1 from '../img/home1.png';
+import home_image from '../img/home1.png';
 
 function AboutSection() {
     return (
@@ -24,7 +24,7 @@ function AboutSection() {
                 <button>Contact Us</button>
             </div>
             <div className="image">
-                <img src={home1} alt="guy with a camera" />
+                <img src={home_image} alt="guy with a camera" />
             </div>
         </div>
     );
