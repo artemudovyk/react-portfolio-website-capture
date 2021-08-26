@@ -1,9 +1,10 @@
 import home_image from '../img/home1.png';
 import styled from 'styled-components/macro';
+import { StyledLayout, StyledDescription, StyledImageDiv, StyledHide } from '../styles'
 
 function AboutSection() {
     return (
-        <StyledAbout>
+        <StyledLayout>
             <StyledDescription>
                 <div className="title">
                     <StyledHide>
@@ -27,43 +28,8 @@ function AboutSection() {
             <StyledImageDiv>
                 <img src={home_image} alt="guy with a camera" />
             </StyledImageDiv>
-        </StyledAbout>
+        </StyledLayout>
     );
 }
-
-// Styled Components
-
-const StyledAbout = styled.div`
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10rem;
-    color: white;
-`;
-
-const StyledDescription = styled.div`
-    flex: 1;
-    padding-right: 5 rem;
-
-    h2 {
-        font-weight: lighter;
-    }
-`
-
-const StyledImageDiv = styled.div`
-    flex: 1;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-`
-
-const StyledHide = styled.div`
-    overflow: hidden;
-`
 
 export default AboutSection;

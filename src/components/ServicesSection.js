@@ -1,56 +1,95 @@
-// import icons and images
+// Import icons and images
 import clock_icon from '../img/clock.svg';
 import diaphragm_icon from '../img/diaphragm.svg';
 import money_icon from '../img/money.svg';
 import teamwork_icon from '../img/teamwork.svg';
-import home_image from '../img/home2.png'
+import home_image from '../img/home2.png';
+// Import styles
+import styled from 'styled-components/macro';
+import {
+    StyledLayout,
+    StyledDescription,
+    StyledImageDiv,
+    StyledHide,
+} from '../styles';
 
 function ServicesSection() {
     return (
-        <div className="services">
-            <div className="description">
+        <StyledServicesLayout>
+            <StyledDescription>
                 <h2>
-                    Hight <span>quality</span> services
+                    High <span>quality</span> services
                 </h2>
-                <div className="cards">
-                    <div className="card">
+
+                <StyledCards>
+                    <StyledCard>
                         <div className="icon">
                             <img src={clock_icon} alt="clock" />
                             <h3>Efficient</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </StyledCard>
 
-                    <div className="card">
+                    <StyledCard>
                         <div className="icon">
                             <img src={teamwork_icon} alt="teamwork" />
                             <h3>Teamwork</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </StyledCard>
 
-                    <div className="card">
+                    <StyledCard>
                         <div className="icon">
                             <img src={diaphragm_icon} alt="diaphragm" />
                             <h3>Diaphragm</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    </StyledCard>
 
-                    <div className="card">
+                    <StyledCard>
                         <div className="icon">
                             <img src={money_icon} alt="money" />
                             <h3>Affordable</h3>
                         </div>
                         <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="image">
+                    </StyledCard>
+                </StyledCards>
+            </StyledDescription>
+
+            <StyledImageDiv>
                 <img src={home_image} alt="camera" />
-            </div>
-        </div>
+            </StyledImageDiv>
+        </StyledServicesLayout>
     );
 }
+
+const StyledServicesLayout = styled(StyledLayout)`
+    h2 {
+        padding-bottom: 5rem;
+    }
+    p {
+        width: 70%;
+        padding: 2rem 0rem 4rem 0rem;
+    }
+`;
+
+const StyledCards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const StyledCard = styled.div`
+    flex-basis: 20rem;
+    .icon {
+        display: flex;
+        align-items: center;
+        h3 {
+            margin-left: 1rem;
+            background: white;
+            color: black;
+            padding: 1rem;
+        }
+    }
+`;
 
 export default ServicesSection;
