@@ -12,7 +12,7 @@ function OurWorkPage() {
             <StyledMovie>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-athlete">
                     <img src={athlete_image} alt="athlete" />
                 </Link>
             </StyledMovie>
@@ -20,7 +20,7 @@ function OurWorkPage() {
             <StyledMovie>
                 <h2>The Racer</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-racer">
                     <img src={racer_image} alt="racer" />
                 </Link>
             </StyledMovie>
@@ -28,7 +28,7 @@ function OurWorkPage() {
             <StyledMovie>
                 <h2>Good Times</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/good-times">
                     <img src={goodtimes_image} alt="good times" />
                 </Link>
             </StyledMovie>
