@@ -1,33 +1,41 @@
 import home_image from '../img/home1.png';
-import styled from 'styled-components/macro';
-import { StyledLayout, StyledDescription, StyledImageDiv, StyledHide } from '../styles'
+import {
+    StyledLayout,
+    StyledDescription,
+    StyledImageDiv,
+    StyledHide,
+} from '../styles';
+import { motion } from 'framer-motion';
+import { titleAnim, fadeAnim, imageAnim } from '../animation';
+import Wave from './Wave';
 
 function AboutSection() {
     return (
         <StyledLayout>
             <StyledDescription>
-                <div className="title">
+                <motion.div className="title">
                     <StyledHide>
-                        <h2>We work to make</h2>
+                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                     </StyledHide>
                     <StyledHide>
-                        <h2>
+                        <motion.h2 variants={titleAnim}>
                             your <span>dreams</span> come
-                        </h2>
+                        </motion.h2>
                     </StyledHide>
                     <StyledHide>
-                        <h2>true</h2>
+                        <motion.h2 variants={titleAnim}>true</motion.h2>
                     </StyledHide>
-                </div>
-                <p>
+                </motion.div>
+                <motion.p variants={fadeAnim}>
                     Contact us for any photography or videography ideas that you
                     have. We have professionals with amazing skills.
-                </p>
-                <button>Contact Us</button>
+                </motion.p>
+                <motion.button variants={fadeAnim}>Contact Us</motion.button>
             </StyledDescription>
             <StyledImageDiv>
-                <img src={home_image} alt="guy with a camera" />
+                <motion.img variants={imageAnim} src={home_image} alt="guy with a camera" />
             </StyledImageDiv>
+            <Wave />
         </StyledLayout>
     );
 }

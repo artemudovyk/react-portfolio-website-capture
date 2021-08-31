@@ -1,8 +1,16 @@
+import { motion } from 'framer-motion';
+import { pageTransitionAnim } from '../animation';
+
 function ContactUsPage() {
     return (
-        <div>
+        <motion.div
+            variants={pageTransitionAnim}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <h1>Contact Us</h1>
-        </div>
+        </motion.div>
     );
 }
 

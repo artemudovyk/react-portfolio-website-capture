@@ -2,6 +2,8 @@ import styled from 'styled-components/macro';
 import { MovieState } from '../movieState';
 import { useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { pageTransitionAnim } from '../animation';
 
 function MovieDetailPage() {
     const [movies, setMovies] = useState(MovieState);
@@ -18,7 +20,12 @@ function MovieDetailPage() {
     return (
         <>
             {movie && (
-                <StyledDetails>
+                <StyledDetails
+                    variants={pageTransitionAnim}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                >
                     <StyledHeadline>
                         <h2>{movie.title}</h2>
                         <img src={movie.mainImg} alt={movie.title} />
@@ -53,7 +60,7 @@ function Award({ title, description }) {
 }
 
 // Styled
-const StyledDetails = styled.div`
+const StyledDetails = styled(motion.div)`
     color: white;
 `;
 
