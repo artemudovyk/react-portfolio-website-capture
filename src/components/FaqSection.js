@@ -1,45 +1,73 @@
 import styled from 'styled-components/macro';
-import { StyledLayout, StyledDescription, StyledImageDiv, StyledHide } from '../styles'
+import {
+    StyledLayout,
+    StyledDescription,
+    StyledImageDiv,
+    StyledHide,
+} from '../styles';
+import Toggle from './Toogle';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 
 function FaqSection() {
     return (
         <StyledFaqLayout>
-            <h2>Any Questions <span>FAQ</span></h2>
-            <div className="question">
-                <h4>How Do I Start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
+            <h2>
+                Any Questions <span>FAQ</span>
+            </h2>
 
-            <div className="question">
-                <h4>Daily Schedule</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis.</p>
+            <AnimateSharedLayout>
+                <div className="question">
+                    <Toggle title="How Do I Start?">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, officiis.
+                            </p>
+                        </div>
+                    </Toggle>
+                    <motion.div layout className="faq-line"></motion.div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
 
-            <div className="question">
-                <h4>Different Payment Methods</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis.</p>
+                <div className="question">
+                    <Toggle title="Daily Schedule">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, officiis.
+                            </p>
+                        </div>
+                    </Toggle>
+                    <motion.div layout className="faq-line"></motion.div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
 
-            <div className="question">
-                <h4>What Products Do You Offer?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, officiis.</p>
+                <div className="question">
+                    <Toggle title="Different Payment Methods">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, officiis.
+                            </p>
+                        </div>
+                    </Toggle>
+                    <motion.div layout className="faq-line"></motion.div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
+
+                <div className="question">
+                    <Toggle title="What Products Do You Offer?">
+                        <div className="answer">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, officiis.
+                            </p>
+                        </div>
+                    </Toggle>
+                    <motion.div layout className="faq-line"></motion.div>
+                </div>
+            </AnimateSharedLayout>
         </StyledFaqLayout>
     );
 }
@@ -74,6 +102,6 @@ const StyledFaqLayout = styled(StyledLayout)`
             padding: 1rem 0rem;
         }
     }
-`
+`;
 
 export default FaqSection;
