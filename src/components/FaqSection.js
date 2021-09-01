@@ -7,10 +7,24 @@ import {
 } from '../styles';
 import Toggle from './Toogle';
 import { motion, AnimateSharedLayout } from 'framer-motion';
+import { scrollRevealAnim } from '../animation';
+import { useScroll } from './useScroll';
+
+// Todo:
+// div.question isn't clickable because it isn't in Toggle element
 
 function FaqSection() {
+    // scroll animation controls
+    const [faqSection, faqScrollAnimControls] = useScroll();
+
     return (
-        <StyledFaqLayout>
+        <StyledFaqLayout
+            // Scroll animation
+            ref={faqSection}
+            variants={scrollRevealAnim}
+            initial="hidden"
+            animate={faqScrollAnimControls}
+        >
             <h2>
                 Any Questions <span>FAQ</span>
             </h2>

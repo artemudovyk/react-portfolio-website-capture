@@ -6,16 +6,22 @@ import teamwork_icon from '../img/teamwork.svg';
 import home_image from '../img/home2.png';
 // Import styles
 import styled from 'styled-components/macro';
-import {
-    StyledLayout,
-    StyledDescription,
-    StyledImageDiv,
-    StyledHide,
-} from '../styles';
+import { StyledLayout, StyledDescription, StyledImageDiv } from '../styles';
+import { scrollRevealAnim } from '../animation';
+import { useScroll } from './useScroll';
 
 function ServicesSection() {
+    // Scroll animation controls
+    const [servicesSection, servicesScrollAnimControls] = useScroll();
+
     return (
-        <StyledServicesLayout>
+        <StyledServicesLayout
+            // Scroll animation
+            ref={servicesSection}
+            variants={scrollRevealAnim}
+            initial="hidden"
+            animate={servicesScrollAnimControls}
+        >
             <StyledDescription>
                 <h2>
                     High <span>quality</span> services

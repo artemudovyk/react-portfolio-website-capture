@@ -52,6 +52,9 @@ export const imageAnim = {
     hidden: {
         scale: 1.5,
         opacity: 0,
+        transition: {
+            duration: 0.75,
+        },
     },
     visible: {
         scale: 1,
@@ -80,8 +83,11 @@ export const waveAnim = {
 export const lineAnim = {
     hidden: {
         width: '0%',
+        transition: {
+            duration: 1,
+        },
     },
-    show: {
+    visible: {
         width: '100%',
         transition: {
             duration: 1,
@@ -113,6 +119,24 @@ export const sliderContainerAnim = {
         transition: {
             staggerChildren: 0.15,
             ease: 'easeOut',
+        },
+    },
+};
+
+export const scrollRevealAnim = {
+    hidden: {
+        opacity: 0,
+        scale: 0.9,
+        transition: {
+            duration: 0.75,
+        },
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.75,
+            // ease: 'easeOut'
         },
     },
 };

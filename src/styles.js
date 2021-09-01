@@ -1,7 +1,8 @@
 import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 // Styled Components
-export const StyledLayout = styled.div`
+export const StyledLayout = styled(motion.div)`
     min-height: 90vh;
     display: flex;
     align-items: center;
