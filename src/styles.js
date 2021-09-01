@@ -19,7 +19,7 @@ export const StyledDescription = styled.div`
     h2 {
         font-weight: lighter;
     }
-`
+`;
 
 export const StyledImageDiv = styled.div`
     flex: 1;
@@ -31,9 +31,13 @@ export const StyledImageDiv = styled.div`
         height: 80vh;
         object-fit: cover;
     }
-`
+`;
+
+export const StyledTitle = styled.div`
+    margin-bottom: 4rem;
+    color: white;
+`;
 
 export const StyledHide = styled.div`
     overflow: hidden;
-`
-
+`;
