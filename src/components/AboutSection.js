@@ -15,7 +15,9 @@ function AboutSection() {
             <StyledDescription>
                 <motion.div className="title">
                     <StyledHide>
-                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+                        <motion.h2 variants={titleAnim}>
+                            We work to make
+                        </motion.h2>
                     </StyledHide>
                     <StyledHide>
                         <motion.h2 variants={titleAnim}>
@@ -32,10 +34,16 @@ function AboutSection() {
                 </motion.p>
                 <motion.button variants={fadeAnim}>Contact Us</motion.button>
             </StyledDescription>
-            <StyledImageDiv>
-                <motion.img variants={imageAnim} src={home_image} alt="guy with a camera" />
-            </StyledImageDiv>
+
             <Wave />
+
+            <StyledImageDiv>
+                <motion.img
+                    variants={imageAnim}
+                    src={home_image}
+                    alt="guy with a camera"
+                />
+            </StyledImageDiv>
         </StyledLayout>
     );
 }

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { pageTransitionAnim, titleAnim } from '../animation';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { StyledHide, StyledTitle } from '../styles';
 
 function ContactUsPage() {
@@ -44,6 +44,10 @@ const StyledContactLayout = styled(motion.div)`
     padding: 5rem 10rem;
     color: #dddddd;
     min-height: 90vh;
+
+    @media (max-width: 1300px) {
+        padding: 2rem 2rem;
+    }
 `;
 
 const StyledCircle = styled.div`
@@ -51,6 +55,11 @@ const StyledCircle = styled.div`
     width: 3rem;
     height: 3rem;
     background: #dddddd;
+
+    @media (max-width: 1300px) {
+        width: 2rem;
+        height: 2rem;
+    }
 `;
 
 const StyledSocialLinks = styled(motion.div)`
@@ -59,6 +68,12 @@ const StyledSocialLinks = styled(motion.div)`
 
     h2 {
         margin: 2rem;
+    }
+
+    @media (max-width: 1300px) {
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 `;
 
