@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 function Toggle({ children, title }) {
     const [toggle, setToggle] = useState(false);
-    console.log(children.props);
 
     return (
         <motion.div layout onClick={() => setToggle(!toggle)}>
