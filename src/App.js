@@ -2,6 +2,7 @@ import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import ScrollToTop from './components/ScrollToTop';
 
 // Import Pages
 import AboutUsPage from './pages/AboutUsPage';
@@ -14,6 +15,7 @@ function App() {
 
     return (
         <div className="App">
+            <ScrollToTop />
             <GlobalStyle />
             <Nav />
             <AnimatePresence exitBeforeEnter>
