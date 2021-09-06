@@ -75,7 +75,7 @@ export const waveAnim = {
         pathLength: 1,
         pathOffset: 0,
         transition: {
-            duration: 2,
+            duration: 3,
         },
     },
 };
