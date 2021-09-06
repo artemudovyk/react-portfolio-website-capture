@@ -107,14 +107,18 @@ const StyledFaqLayout = styled(StyledLayout)`
 
     .question {
         padding: 3rem 0rem;
-        cursor: pointer;
     }
 
     .answer {
         padding: 2rem 0rem;
         p {
             padding: 1rem 0rem;
+            cursor: pointer;
         }
+    }
+
+    h4 {
+        cursor: pointer;
     }
 `;
 
